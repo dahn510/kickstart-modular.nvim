@@ -59,6 +59,10 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Tabstop
+--  See `:help tabstop`
+vim.opt.tabstop = 4
+
 -- Custom diagnostic signs
 vim.diagnostic.config {
   virtual_text = {
@@ -73,7 +77,6 @@ local signs = {
   DiagnosticSignInfo = '🧠',
 }
 for type, icon in pairs(signs) do
-  print(type)
   vim.fn.sign_define(type, { text = icon, texthl = type, numhl = type })
 end
 -- vim: ts=2 sts=2 sw=2 et
