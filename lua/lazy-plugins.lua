@@ -25,6 +25,29 @@ require('lazy').setup({
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 
+  {
+    'iamcco/markdown-preview.nvim',
+    cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
+    build = 'cd app && yarn install',
+    init = function()
+      vim.g.mkdp_filetypes = { 'markdown' }
+    end,
+    ft = { 'markdown' },
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  },
+  {
+    'kylechui/nvim-surround',
+    version = '*', -- use for stability; omit to use main branch
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {
+        --configs here, or leave empty to use defaults
+      }
+    end,
+  },
+
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
