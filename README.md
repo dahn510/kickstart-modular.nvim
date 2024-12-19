@@ -1,5 +1,12 @@
 # kickstart-modular.nvim
 
+Read from [Introduction](#Introduction) if you wanna learn more about this setup.
+
+## Customization
+
+Uses [blink.cmp](https://github.com/Saghen/blink.cmp) for code completion.
+Requires the hottest and latest neovim. So, build and install neovim from source.
+
 ## Introduction
 
 *This is a fork of [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) that moves from a single file to a multi file configuration.*
