@@ -10,6 +10,21 @@
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
+
+  {
+    'neanias/everforest-nvim',
+    version = false,
+    lazy = false,
+    priority = 1000, -- make sure to load this before all the other start plugins
+    -- Optional; default configuration will be used if setup isn't called.
+    config = function()
+      require('everforest').setup {
+        background = 'hard',
+      }
+      vim.cmd.colorscheme 'everforest'
+    end,
+  },
+
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
